@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    # Sesuaikan DEPLOYPATH dengan folder Application Root di menu "Setup Node.js App" cPanel DomaiNesia Anda
+    # Contoh: /home/USERNAME_CPANEL/portal-sekolah
+    - export DEPLOYPATH=/home/$USER/portal-sekolah
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R dist $DEPLOYPATH/
+    - /bin/cp package.json $DEPLOYPATH/
+    - /bin/cp package-lock.json $DEPLOYPATH/ || true
+    - /bin/mkdir -p $DEPLOYPATH/uploads
+    - /bin/mkdir -p $DEPLOYPATH/tmp
+    - /bin/touch $DEPLOYPATH/tmp/restart.txt

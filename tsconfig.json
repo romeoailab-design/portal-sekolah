@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "module": "ESNext",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": ["vite/client", "node"],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "firebase/app": [
+        "./src/lib/local-firebase/app.ts"
+      ],
+      "firebase/auth": [
+        "./src/lib/local-firebase/auth.ts"
+      ],
+      "firebase/firestore": [
+        "./src/lib/local-firebase/firestore.ts"
+      ],
+      "firebase/storage": [
+        "./src/lib/local-firebase/storage.ts"
+      ]
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "fix_curriculum_membership.ts",
+    "fix_stuff.ts",
+    "update_user_roles.ts"
+  ]
+}
